@@ -1,0 +1,7 @@
+cmake_minimum_required (VERSION 2.6)
+project (run)
+include_directories("lib/thrill")
+add_subdirectory (lib/thrill)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O3 -std=c++14 -Wall -Wextra")
+add_executable(run src/main.cpp)
+target_link_libraries(run thrill)
